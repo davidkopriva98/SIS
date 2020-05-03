@@ -1,0 +1,4 @@
+﻿<div *ngIf="message" [ngClass]="message.cssClass">
+  {{message.text}}
+  <i style="float: right; cursor: pointer" (click)="alertService.clear()" class="pi pi-times"></i>
+</div>

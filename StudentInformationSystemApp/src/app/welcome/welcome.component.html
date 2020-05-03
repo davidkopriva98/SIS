@@ -1,0 +1,10 @@
+<h1>Welcome to Student Information System!</h1>
+<div *ngIf="currentStudent; then thenBlock else elseBlock"></div>
+<ng-template #thenBlock>
+  <h3>Welcome back {{currentStudent.firstName}} {{currentStudent.lastName}}</h3>
+  <h4>Change courses:</h4>
+  <app-enrolled-courses></app-enrolled-courses>
+</ng-template>
+<ng-template #elseBlock>
+  <h3>Please log in to use the site.</h3>
+</ng-template>

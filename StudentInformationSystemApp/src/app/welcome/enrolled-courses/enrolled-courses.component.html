@@ -1,0 +1,22 @@
+<p-card>
+  <div class="text-center">
+    <p-pickList #pl [source]="available" [target]="selected" [responsive]="true" filterBy="name" [dragdrop]="true"
+                sourceHeader="Available courses" targetHeader="Enrolled courses"
+                [showTargetControls]="false" [showSourceControls]="false"
+                sourceFilterPlaceholder="Search by course" targetFilterPlaceholder="Search by course"
+                (onMoveToTarget)="enrollTo($event.items)" (onMoveToSource)="disenrollTo($event.items)"
+                [sourceStyle]="{'height':'300px'}" [targetStyle]="{'height':'300px'}">
+      <ng-template let-course pTemplate="item">
+        <div class="ui-helper-clearfix  ng-star-inserted">
+          <div class="wrapper-circle">
+            <div class="course-circle">
+              <p style="line-height: 48px; font-size: initial;">{{course.letters}}</p>
+            </div>
+          </div>
+          <div style="font-size:14px;float:right;margin:15px 5px 0 0">{{course.name}}</div>
+        </div>
+      </ng-template>
+    </p-pickList>
+  </div>
+  <div class="py-2" style="text-align: center;"><button pButton (click)="pl.resetFilter(); resetCourses()" label="Reset"></button><span class="px-2"></span><button pButton (click)="saveChanges()" label="Save"></button></div>
+</p-card>

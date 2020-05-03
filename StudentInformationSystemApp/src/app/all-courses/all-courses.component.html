@@ -1,0 +1,50 @@
+<div class="input-group mb-3 ui-lg-8 mx-auto" style="display: flex">
+  <div class="input-group-prepend">
+    <span class="input-group-text"><i class="pi pi-search"></i></span>
+  </div>
+  <input type="text" class="form-control" placeholder="Search course name..." [(ngModel)]="searchText">
+</div>
+<!--
+<div class="content-section implementation carousel-demo">
+  <p-carousel [value]="courses"  styleClass="custom-carousel" [numVisible]="4" [numScroll]="3" [circular]="true" [autoplayInterval]="2500" [responsiveOptions]="responsiveOptions">
+    <ng-template let-course pTemplate="item">
+      <div class="course-details">
+        <div class="p-grid p-nogutter">
+          <div class="p-col-12">
+            <div class="course-cirlce">
+              <p style="text-align: center; line-height: 120px; font-size: xxx-large;">
+                {{course.letters}}</p>
+            </div>
+          </div>
+          <div class="p-col-12 course-data">
+            <div class="course-title">{{course.name}}</div>
+            <div class="course-subtitle">{{course.desc}}</div>
+
+            <div class="course-buttons">
+              <button pButton type="button" class="ui-button-secondary" icon="pi pi-search"></button>
+              <button pButton type="button" class="ui-button-secondary" icon="pi pi-star"></button>
+              <button pButton type="button" class="ui-button-secondary" icon="pi pi-cog"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ng-template>
+  </p-carousel>
+</div>
+-->
+
+<!--class="list-group-item list-group-item-action"-->
+<div class="ui-g">
+    <div class="ui-g-12 ui-md-6 ui-lg-4" *ngFor="let course of courses | courseNameFilter:searchText">
+      <p-card>
+        <div style="text-align: center">
+          <div class="course-cirlce">
+            <p style="text-align: center; line-height: 120px; font-size: xxx-large;">
+              {{course.letters}}</p>
+          </div>
+        </div>
+        <div class="course-title">{{course.name}}</div>
+        <div class="course-subtitle">{{course.desc}}</div>
+      </p-card>
+    </div>
+</div>

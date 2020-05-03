@@ -1,0 +1,28 @@
+﻿
+  <div class="container container-fluid ">
+    <p-card>
+    <div class="row">
+      <div class="col-sm-6 offset-sm-3 pt-3 pb-3">
+        <h2>Login</h2>
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+          <div class="form-group">
+            <label>Enter your student number</label>
+            <input formControlName="username" class="form-control" [ngClass]="{ 'is-invalid': submitted && loginForm.controls.username.errors }" required [minLength]="8" [maxLength]="8" />
+            <div *ngIf="submitted && loginForm.controls.username.errors" class="invalid-feedback">
+              <div *ngIf="loginForm.controls.username.errors.required">Student number is required</div>
+              <div *ngIf="loginForm.controls.username.errors.minlength">Student number must be 8 digits long</div>
+              <div *ngIf="loginForm.controls.username.errors.maxlength">Student number must be 8 digits long</div>
+            </div>
+          </div>
+          <div class="form-group">
+            <button [disabled]="loading" class="btn btn-primary">
+              <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+              Login
+            </button>
+          </div>
+        </form>
+
+      </div>
+    </div>
+    </p-card>
+  </div>

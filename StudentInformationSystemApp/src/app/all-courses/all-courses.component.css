@@ -1,0 +1,17 @@
+.course-title {
+  font-weight: 700;
+  font-size: 20px;
+  margin-top: 24px;
+}
+.course-subtitle {
+  margin: 0.25em 0 1em 0;
+}
+
+.course-cirlce {
+  margin-top: 1rem;
+  height: 125px;
+  width: 125px;
+  background-color: #ffc107;
+  border-radius: 50%;
+  display: inline-block;
+}
