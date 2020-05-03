@@ -22,10 +22,15 @@ public class LoadDatabase {
             Course prog1 = new Course("Programming 1", desc);
             Course com = new Course("Computer Communications", desc);
             Course math = new Course("Mathematics", desc);
+            Course db = new Course("Databases", desc);
+            Course db2 = new Course("Databases 2", desc);
+            Course gd = new Course("Graphic Design", desc);
+            Course co = new Course("Computer Organization", desc);
+
             log.info("Preloading classes " + courseRepository.save(prog1));
             log.info("Preloading classes " + courseRepository.save(new Course("Operating Systems", desc)));
             log.info("Preloading classes " + courseRepository.save(com));
-            log.info("Preloading classes " + courseRepository.save(new Course("Databases", desc)));
+            log.info("Preloading classes " + courseRepository.save(db));
             log.info("Preloading classes " + courseRepository.save(new Course("Programming 2", desc)));
             log.info("Preloading classes " + courseRepository.save(new Course("Discrete Structures", desc)));
             log.info("Preloading classes " + courseRepository.save(math));
@@ -35,15 +40,15 @@ public class LoadDatabase {
             log.info("Preloading classes " + courseRepository.save(new Course("Algorithms and Data Structures 2", desc)));
             log.info("Preloading classes " + courseRepository.save(new Course("Project Practicum", desc)));
             log.info("Preloading classes " + courseRepository.save(new Course("Industrial Practice", desc)));
-            log.info("Preloading classes " + courseRepository.save(new Course("Database 2", desc)));
+            log.info("Preloading classes " + courseRepository.save(db2));
             log.info("Preloading classes " + courseRepository.save(new Course("Information Systems", desc)));
-            log.info("Preloading classes " + courseRepository.save(new Course("Graphic Design", desc)));
+            log.info("Preloading classes " + courseRepository.save(gd));
             log.info("Preloading classes " + courseRepository.save(new Course("Computer Organization", desc)));
 
             log.info("Preloading students " + studentRepository.save(new Student(63190001, "Janez", "Novak", List.of(prog1, com, math))));
-            log.info("Preloading students " + studentRepository.save(new Student(63190002, "Martin", "Horvat")));
+            log.info("Preloading students " + studentRepository.save(new Student(63190002, "Martin", "Horvat", List.of(db2, gd, co))));
             log.info("Preloading students " + studentRepository.save(new Student(63190004, "Ana", "Kranjc")));
-            log.info("Preloading students " + studentRepository.save(new Student(63190004, "Marija", "Golob")));
+            log.info("Preloading students " + studentRepository.save(new Student(63190003, "Marija", "Golob")));
         };
     }
 
