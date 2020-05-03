@@ -1,7 +1,5 @@
 # SIS
  Task1
- 
-# How to run
 
 ## StudentInformationSystemBackend
 
@@ -12,6 +10,10 @@ Open terminal and navigate to `/StudentInformationSystemBackend`.
 ### Run
 
 Run `.\mvnw spring-boot:run`.
+
+### Test 
+
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/7ef55e7bd949025d5a84)
 
 ## StudentInformationSystemApp
 
