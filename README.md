@@ -7,11 +7,11 @@
 
 ### Preparations
 
-Open terminal and navigate to `/StudentInformationSystemBackend`
+Open terminal and navigate to `/StudentInformationSystemBackend`.
 
 ### Run
 
-Run `.\mvnw spring-boot:run`
+Run `.\mvnw spring-boot:run`.
 
 ## StudentInformationSystemApp
 
@@ -19,13 +19,17 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ### Preparations
 
-Navigate to `/StudentInformationSystemApp`
-Run `npm install`
+Navigate to `/StudentInformationSystemApp`.\
+Run `npm install`.
 
 ### Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Run `ng build` to build the project.
 
 ### Run
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
+## How to use the app
+
+The app comes preloaded with  a few students, with student numbers from 63190001 to 63190004, which are used to log in as student.
