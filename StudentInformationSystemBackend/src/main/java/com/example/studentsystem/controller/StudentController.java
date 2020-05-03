@@ -68,6 +68,8 @@ public class StudentController {
         Student student = one(idS);
         Course course = courseRepository.findById(idC)
                     .orElseThrow(() -> new CourseNotFoundException(idC));
+        if (student.getEnrolledCourses().contains(course))
+            throw new StudentAlreadyEnrolledException(idC);
         student.setNewEnrolledCourse(course);
         return studentRepository.save(student);
     }
@@ -82,6 +84,8 @@ public class StudentController {
                 Integer idC = Integer.parseInt(id);
                 Course course = courseRepository.findById(idC)
                         .orElseThrow(() -> new CourseNotFoundException(idC));
+                if (student.getEnrolledCourses().contains(course))
+                    throw new StudentAlreadyEnrolledException(idC);
                 courseList.add(course);
             }
         }
