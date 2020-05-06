@@ -51,11 +51,4 @@ public class LoadDatabase {
             log.info("Preloading students " + studentRepository.save(new Student(63190003, "Marija", "Golob")));
         };
     }
-
-    @Bean
-    CommandLineRunner initStudentDB(StudentRepository studentRepository) {
-        return args -> {
-
-        };
-    }
 }
